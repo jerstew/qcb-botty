@@ -1,7 +1,7 @@
 {
     "name": "hotshot-bot",
     "version": "1.0.0",
-    "description": "a discord bot by JEREMY",
+    "description": "Command development/play for discord bot, built with quick-chat-bot by jamesqquick",
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
