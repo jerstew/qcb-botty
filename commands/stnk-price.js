@@ -1,11 +1,15 @@
 const argsParser = require('../utils/args-validate');
+var _ = require('lodash/core');
 
 module.exports = {
-    text: '!stnk-price',
+    text: '!stnkprice',
     callback: async (msg) => {
         if (msg) {
-            if (argsParser.validateArguments(msg.content, argumentsModel)) {
-                console.log('proceed with logic yay');
+            let validationStatus = await argsParser.validateArguments(msg.content, argumentsModel);
+            if (validationStatus.status === 'failed') {
+                !_.isEmpty(validationStatus.reason) ? msg.channel.send("Command failed because: " + validationStatus.reason.toString()) : msg.channel.send("Unknown error");
+            } else {
+                msg.channel.send("Command passes validation");
             }
         }
         // var commands = commandParser(msg.content);
