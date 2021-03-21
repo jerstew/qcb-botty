@@ -5,8 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
-        "test": "test",
-        "postinstall": "cd ./node_modules/quick-chat-bot-jormy && npm install"
+        "test": "test"
     },
     "repository": {
         "type": "git",
