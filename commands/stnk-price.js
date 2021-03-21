@@ -1,4 +1,4 @@
-const argsParser = require('../utils/argumentParser');
+const argsParser = require('../utils/args-validate');
 
 module.exports = {
     text: '!stnk-price',
